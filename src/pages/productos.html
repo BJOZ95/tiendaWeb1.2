@@ -1,37 +1,76 @@
 <!DOCTYPE html>
+
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link rel="stylesheet" href="../css/estilos.css">
-    <link rel="stylesheet" href="../css/products.css" />
-    <link rel="Icon" href="../img/carrito-de-compras.png">
-    <title>Products</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/estilos.css">
+  <link rel="stylesheet" href="../css/products.css" />
+  <link rel="Icon" href="../img/carrito-de-compras.png">
+  <title>Products</title>
 
-    </head>
+</head>
+
 <body>
-    <header class="main-header">
-        <div class="container container--flex">
-          <div class="main-header__container">
-            <h1 class="main-header__title">GAMING SHOP</h1>
-            <span class="icon-menu" id="btn-menu"><i class="fas fa-bars"></i></span>
-            <nav class="main-nav" id="main-nav">
-              <ul class="menu">
-                <li class="menu__item"><a href="../index.html" class="menu__link">HOME</a></li>
-                <li class="menu__item"><a href="" class="menu__link">ABOUT</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">PRODUCTS</a></li>
-                <li class="menu__item"><a href="" class="menu__link">SHOP</a></li>
-                <li class="menu__item"><a href="" class="menu__link">CONTACT</a></li>
-              </ul>
-            </nav>
-          </div>
-          <div class="main-header__container">
-            <button id="checkout" class="main-header__link" onclick="pay()"><i class="fas fa-shopping-cart"></i></button>
-            <input type="search" class="main-header__input" placeholder="Buscar productos"><i class="fas fa-search"></i>
-          </div>
-        </div>
-      </header>
-    <div id="page-content" class="page-content">
-
+  <header class="main-header">
+    <div class="container container--flex">
+      <div class="main-header__container">
+        <h1 class="main-header__title">GAMING SHOP</h1>
+        <span class="icon-menu" id="btn-menu"><i class="fas fa-bars"></i></span>
+        <nav class="main-nav" id="main-nav">
+          <ul class="menu">
+            <li class="menu__item"><a href="../index.html" class="menu__link">HOME</a></li>
+            <li class="menu__item"><a href="../index.html#nosotros" class="menu__link">ABOUT</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">PRODUCTS</a></li>
+            <li class="menu__item"><a href="../index.html#cont_pro" class="menu__link">SHOP</a></li>
+            <li class="menu__item"><a href="../index.html#formulario" class="menu__link">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="main-header__container">
+        <button id="checkout" class="main-header__link" onclick="showOrder()"><i
+            class="fas fa-shopping-cart"></i></button>
+        <!-- <button id="checkout" class="button-checkout" onclick="showOrder()">Carrito</button> -->
+        <!-- <input type="search" class="main-header__input" placeholder="Buscar productos"><i class="fas fa-search"></i> -->
+      </div>
     </div>
-    <script src="../js/product.js"></script>
+  </header>
+
+
+  <div id="page-content" class="page-content">
+
+    <div id="product-cards" class="product-cards"></div>
+
+    <div id="order" class="order">
+      <h1>Orden</h1>
+      <h2 id="order-total">Total: $150</h2>
+      <table id="order-table" class="order-table">
+        <tr>
+          <th>Cantidad</th>
+          <th>Detalle</th>
+          <th>Subtotal</th>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Pesas</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Banco ajustable</td>
+          <td>100</td>
+        </tr>
+      </table>
+      <div id="order-actions" class="order-actions">
+        <p onclick="displayProducts()">
+          << volver</p>
+            <p onclick="pay()">confirmar >></p>
+      </div>
+    </div>
+
+  </div>
+  <div id="page-content" class="page-content">
+
+  </div>
+
+  <script src="../js/product.js"></script>
 </body>

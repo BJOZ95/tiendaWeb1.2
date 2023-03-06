@@ -47,3 +47,18 @@ btnLeft.addEventListener('click', function(){
 setInterval(function(){
   Next();
 }, 5000);
+// Cuando el usuario hace clic en el botón, ir a la parte superior de la página
+function topFunction() {
+  document.body.scrollTop = 0; // para Safari
+  document.documentElement.scrollTop = 0; // para Chrome, Firefox, IE y Opera
+}
+// Mostrar el botón cuando el usuario se desplaza 20 píxeles hacia abajo desde la parte superior de la página
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}

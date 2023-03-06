@@ -36,6 +36,22 @@ img {
 .main-header__link {
   color: #333;
 }
+#myBtn {
+  display: none; /* ocultar el botón por defecto */
+  position: fixed; /* botón fijo en la pantalla */
+  bottom: 20px; /* distancia desde abajo */
+  right: 30px; /* distancia desde la derecha */
+  z-index: 99; /* asegurarse de que el botón esté por encima de otros elementos */
+  font-size: 18px; /* tamaño del texto */
+  border: none; /* sin borde */
+  outline: none; /* sin borde al hacer clic */
+  background-color: rgba(73, 36, 239, 0.844); /* color de fondo del botón */
+  color: white; /* color del texto */
+  cursor: pointer; /* cambiar el cursor al pasar sobre el botón */
+  padding: 15px; /* agregar relleno al botón */
+  border-radius: 4px; /* agregar bordes redondeados */
+}
+
 
 /* Estilos del Menu */
 .main-nav {
