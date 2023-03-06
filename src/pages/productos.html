@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <header class="main-header">
+  <header class="main-header" id="main-header">
     <div class="container container--flex">
       <div class="main-header__container">
         <h1 class="main-header__title">GAMING SHOP</h1>
@@ -48,16 +48,19 @@
           <th>Cantidad</th>
           <th>Detalle</th>
           <th>Subtotal</th>
+          <th>Eliminar</th>
         </tr>
         <tr>
           <td>2</td>
           <td>Pesas</td>
           <td>50</td>
+          <td><button class="eliminar" onclick="removeProduct(p.id)" data-id="${p.id}">Eliminar</button></td>
         </tr>
         <tr>
           <td>1</td>
           <td>Banco ajustable</td>
           <td>100</td>
+          <td><button class="eliminar" onclick="removeProduct(p.id)" data-id="${p.id}">Eliminar</button></td>
         </tr>
       </table>
       <div id="order-actions" class="order-actions">
@@ -68,6 +71,7 @@
     </div>
 
   </div>
+
   <div id="page-content" class="page-content">
 
   </div>
