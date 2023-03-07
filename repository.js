@@ -5,8 +5,7 @@ const auth = new google.auth.GoogleAuth({
   scopes: ['https://www.googleapis.com/auth/spreadsheets'],
 });
 
-const sheets = google.sheets({ version: "v4", auth: auth });
-
+const sheets = google.sheets({ version: "v4", auth: auth }); 
 //funcion para leer los datos
 async function read() {
   const response = await sheets.spreadsheets.values.get({
@@ -46,4 +45,4 @@ async function write(products) {
 module.exports = {
   read,
   write,
-};
+  };

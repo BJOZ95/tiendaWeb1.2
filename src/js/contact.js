@@ -1,48 +1,11 @@
-$(document).ready(function () {
-    $("#btnSend").click(function () {
-      var errores = "";
+const form = document.getElementById("formContacto");
+form.addEventListener("submit", function(event) {
+  event.preventDefault(); // Evita el envío de formulario predeterminado
   
-      // Validado Nombre ==============================
-      if ($("#names").val() == "") {
-        errores += "<p>Escriba un nombre</p>";
-        $("#names").css("border-bottom-color", "#F14B4B");
-      } else {
-        $("#names").css("border-bottom-color", "#d1d1d1");
-      }
-  
-      // Validado Correo ==============================
-      if ($("#email").val() == "") {
-        errores += "<p>Ingrese un correo</p>";
-        $("#email").css("border-bottom-color", "#F14B4B");
-      } else {
-        $("#email").css("border-bottom-color", "#d1d1d1");
-      }
-  
-      // Validado Mensaje ==============================
-      if ($("#mensaje").val() == "") {
-        errores += "<p>Escriba un mensaje</p>";
-        $("#mensaje").css("border-bottom-color", "#F14B4B");
-      } else {
-        $("#mensaje").css("border-bottom-color", "#d1d1d1");
-      }
-  
-      // ENVIANDO MENSAJE ============================
-      if ((errores == "") == false) {
-        var mensajeModal =
-          '<div class="modal_wrap">' +
-          '<div class="mensaje_modal">' +
-          "<h3>Errores encontrados</h3>" +
-          errores +
-          '<span id="btnClose">Cerrar</span>' +
-          "</div>" +
-          "</div>";
-  
-        $("body").append(mensajeModal);
-      }
-  
-      // CERRANDO MODAL ==============================
-      $("#btnClose").click(function () {
-        $(".modal_wrap").remove();
-      });
-    });
-  });
+  // Aquí es donde enviarías los datos del formulario a través de AJAX o una API
+  // Después de eso, muestra un mensaje de confirmación
+  alert("Sugerencia enviada");
+
+  // Restablece los campos del formulario
+  form.reset();
+});

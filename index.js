@@ -3,6 +3,7 @@ const app = express();
 const port = 3000;
 const repository = require("./repository");
 
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -33,6 +34,7 @@ app.post("/api/pay", async (req, res) => {
   else {
     await repository.write(productsCopy);
     res.send(productsCopy);
+    
   }
 });
 

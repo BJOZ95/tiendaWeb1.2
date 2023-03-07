@@ -17,7 +17,7 @@ function add(productId, price) {
     displayProducts();
 }
 async function eliminarProducto(id) {
-    if (window.confirm("¿Seguro qué quieres levantar este producto? 7w7")) {
+    if (window.confirm("¿Seguro qué quieres levantar este producto?")) {
         const index = order.items.findIndex(p => p.id === id);
         if (index > -1) {
             const product = order.items[index];

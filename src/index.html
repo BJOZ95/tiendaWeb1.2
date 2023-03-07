@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./css/contact.css">
   <link rel="stylesheet" href="./css/about.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link rel="Icon" href="./img/carrito-de-compras.png">
 
   <title>Home</title>
@@ -482,26 +483,28 @@
             <p><span class="fa fa-mobile"></span> 0960436815</p>
           </section>
         </section>
-        <form action="" class="form_contact">
+      
+        <form action="" class="form_contact" id="formContacto">
           <h2>Envíanos tus sugerencias</h2>
           <div class="user_info">
-            <label for="names">Nombres *</label>
-            <input type="text" id="names">
-
-            <label for="phone">Telefono / Celular</label>
-            <input type="text" id="phone">
-
-            <label for="email">Correo electronico *</label>
-            <input type="text" id="email">
-
-            <label for="mensaje">Sugerencia *</label>
-            <textarea id="mensaje"></textarea>
-
-            <input type="button" value="Enviar Sugerencia" id="btnSend">
+            <label for="names">Nombres </label>
+            <input type="text" id="names" name="names" required>
+      
+            <label for="phone">Teléfono / Celular</label>
+            <input type="text" id="phone" name="phone" required>
+      
+            <label for="email">Correo electrónico </label>
+            <input type="email" id="email" name="email" required>
+      
+            <label for="mensaje">Sugerencia</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+      
+            <input type="submit" value="Enviar Sugerencia" id="btnEnviar">
           </div>
         </form>
-
+      
       </section>
+      
     </div>
   </main>
   <footer class="main-footer">
